@@ -6,44 +6,49 @@
 
 body {
   font-family: "Segoe UI", sans-serif;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  background: radial-gradient(circle at top, #1f5a46, #0f2f26);
+  /* 🎨 richer background with orange touch */
+  background: radial-gradient(circle at top, #1f5a46 60%, #0f2f26),
+              radial-gradient(circle at bottom right, rgba(243,116,56,0.25), transparent 60%);
   color: white;
 }
 
 .container {
   text-align: center;
   width: 90%;
-  max-width: 380px;
+  max-width: 420px;
 }
 
+/* 🔥 BIG LOGO */
 .logo {
-  width: 200px;
-  margin-bottom: 40px;
-  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+  width: 280px; /* increased */
+  max-width: 90%;
+  margin-bottom: 50px;
+
+  filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));
 }
 
 .links {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 16px;
 }
 
 .btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
 
   text-decoration: none;
   color: white;
-  padding: 16px;
+  padding: 18px;
   border-radius: 50px;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 500;
 
   background: rgba(255,255,255,0.08);
@@ -55,29 +60,29 @@ body {
 }
 
 .icon svg {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
 }
 
-/* 🔥 Hover effect */
+/* ✨ Orange integration */
 .btn:hover {
-  background: #F37438;
+  background: linear-gradient(135deg, #F37438, #ff8c52);
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 10px 25px rgba(243, 116, 56, 0.4);
+  box-shadow: 0 12px 30px rgba(243, 116, 56, 0.5);
 }
 
 .btn:hover svg {
   color: white;
 }
 
-/* 📱 Mobile optimization */
+/* 📱 Mobile */
 @media (max-width: 400px) {
   .logo {
-    width: 160px;
+    width: 220px;
   }
 
   .btn {
     font-size: 15px;
-    padding: 14px;
+    padding: 15px;
   }
 }
