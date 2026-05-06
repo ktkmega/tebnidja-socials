@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: radial-gradient(circle at top, #1f5a46, #0f2f26);
+  color: white;
+}
+
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 380px;
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 40px;
+  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  text-decoration: none;
+  color: white;
+  padding: 16px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  transition: all 0.25s ease;
+}
+
+.icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* 🔥 Hover effect */
+.btn:hover {
+  background: #F37438;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(243, 116, 56, 0.4);
+}
+
+.btn:hover svg {
+  color: white;
+}
+
+/* 📱 Mobile optimization */
+@media (max-width: 400px) {
+  .logo {
+    width: 160px;
+  }
+
+  .btn {
+    font-size: 15px;
+    padding: 14px;
+  }
+}
